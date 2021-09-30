@@ -4,6 +4,7 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
+    private double weight = 0;
     private double totalWeight = 0;
 
     public Basket() {
@@ -23,6 +24,13 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
 
+    public Basket(double weight) {
+        increaseCount(1);
+        this.weight = this.weight + count;
+        this.totalWeight = totalWeight;
+
+    }
+
     public static int getCount() {
         return count;
     }
@@ -31,11 +39,11 @@ public class Basket {
         Basket.count = Basket.count + count;
     }
 
-    public void add(String name, int price) {add(name, price, 1);}
-
-    private void add(String name, int price, double totalWeight) {
-
+    public void add(String name, int price) {
+        add(name, price, 1);
     }
+
+    public void add(double weight, double totalWeight) {add(this.weight, 1); }
 
     public void add(String name, int price, int count) {
         boolean error = false;
@@ -53,10 +61,8 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " шт. - " + price;
+                count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
-        totalWeight = totalWeight + count;
-
     }
 
     public void clear() {
