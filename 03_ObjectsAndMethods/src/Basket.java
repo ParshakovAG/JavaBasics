@@ -24,7 +24,8 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
     public Basket(double weight){
-        this.weight = 1000;
+        this();
+        this.totalWeight = this.weight + count;
     }
 
     public static int getCount() {
@@ -36,7 +37,7 @@ public class Basket {
     }
 
     public void add(String name, int price, int count)
-            {add(name, price, 1, 1000);}
+            {add(name, price, 1, 500);}
 
     private void add(String name, int price) {}
 
