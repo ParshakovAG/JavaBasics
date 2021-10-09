@@ -9,7 +9,7 @@ public class Basket {
 
     public Basket() {
         increaseCount(1);
-        items = "Список товаров:";
+        items = "Список товаров: \n";
         this.limit = 1000000;
     }
 
@@ -23,9 +23,11 @@ public class Basket {
         this.items = this.items + items;
         this.totalPrice = totalPrice;
     }
+
     public Basket(double weight){
         this();
-        this.totalWeight = this.weight + count;
+        this.weight = weight * count;
+        this.totalWeight = totalWeight;
     }
 
     public static int getCount() {
@@ -38,8 +40,6 @@ public class Basket {
 
     public void add(String name, int price, int count)
             {add(name, price, 1, 500);}
-
-    private void add(String name, int price) {}
 
     public void add(String name, int price, int count, double weight) {
         boolean error = false;
@@ -60,8 +60,7 @@ public class Basket {
             count + " шт. - " + price + "руб." + " - "
                 + weight + " гр.";
         totalPrice = totalPrice + count * price;
-        totalWeight = totalWeight + count;
-
+        totalWeight = totalWeight + count * weight;
     }
 
     public void clear() {
