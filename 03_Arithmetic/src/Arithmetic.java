@@ -23,7 +23,7 @@ public class Arithmetic {
     }
 
     public int biggerNum(int a, int b) {
-        if (a > b) {
+        if (a < b) {
 
         } else {
             System.out.println("Меньшее значение " + b);
