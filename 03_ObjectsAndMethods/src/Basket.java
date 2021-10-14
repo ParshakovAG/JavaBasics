@@ -24,7 +24,7 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
 
-    public Basket(double weight){
+    public Basket(double weight, int totalWeight){
         this();
         this.weight = weight * count;
         this.totalWeight = totalWeight;
