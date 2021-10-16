@@ -1,35 +1,20 @@
 public class Arithmetic {
 
-    public static void main(String[] args) {
-        Arithmetic summa = new Arithmetic();
-        int summaResult = summa.amountNum(5, 2);
-        System.out.println("Сумма " + summaResult);
-        Arithmetic product = new Arithmetic();
-        int productNumber = product.productNum(5, 2);
-        System.out.println("Произведение " + productNumber);
-        Arithmetic bigger = new Arithmetic();
-        int biggerResult = bigger.biggerNum(5, 2);
-        System.out.println("Большее значение " + biggerResult);
+        int num1;
+        int num2;
+
+    public Arithmetic(int a, int b) {
+        this.num1 = a;
+        this.num2 = b;
     }
 
-    public int amountNum(int first, int second) {
-        int result = first + second;
-        return result;
+    public void sum(int sum) {
+        System.out.println("Сумма " + sum);
     }
+    public static void main(String [] args) {
+        Arithmetic sum = new Arithmetic(5, 2);
 
-    public int productNum(int one, int two) {
-        int result = one * two;
-        return result;
-    }
-
-    public int biggerNum(int a, int b) {
-        if (a < b) {
-
-        } else {
-            System.out.println("Меньшее значение " + b);
-        }
-
-        return a;
     }
 }
+
 
