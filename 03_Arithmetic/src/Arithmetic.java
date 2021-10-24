@@ -1,20 +1,32 @@
 public class Arithmetic {
 
-        int num1;
-        int num2;
+    int num1;
+    int num2;
 
-    public Arithmetic(int a, int b) {
-        this.num1 = a;
-        this.num2 = b;
-    }
+    public Arithmetic(int i, int j) {
+        this.num1 = i;
+        this.num2 = j;
 
-    public void sum(int sum) {
-        System.out.println("Сумма " + sum);
+    public static void main(String[] args) {
+            Arithmetic first = new Arithmetic(25, 10);
+            System.out.println(summa());
+            System.out.println(proizvedenye());
+            System.out.println("Большее значение" + maximum());
+            System.out.println("Меньшее значение" + num2);
+        }
     }
-    public static void main(String [] args) {
-        Arithmetic sum = new Arithmetic(5, 2);
-
+        public int summa () {
+            return num1 + num2;
+        }
+        public int proizvedenye () {
+            return num1 * num2;
+        }
+        public int maximum () {
+            if (num1 > num2) {
+                return num1;
+            }
+            return num2;
+        }
     }
-}
 
 
