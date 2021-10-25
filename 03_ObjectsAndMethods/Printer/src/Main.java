@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Printer printer1 = new Printer();
-        printer1.append("Just text", "Detect");
+        printer1.append("Just text", "Detective");
         printer1.append("Just text", "Detective");
         printer1.append("Many Text on this book", "Detective Story", 399);
         printer1.print();

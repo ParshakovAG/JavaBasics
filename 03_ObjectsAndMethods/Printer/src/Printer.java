@@ -1,5 +1,5 @@
 public class Printer {
-    private String queue = "";
+    private String queue = "Принтер";
     private int pendingPagesCount = 0;
     private static int lifeTimePrintedPages = 0;
     public static int count = 0;
@@ -15,7 +15,7 @@ public class Printer {
     }
 
     public void append(String text) {
-        append(text, "", +1);
+        append(text, "", 1);
     }
 
     public void append(String text, String name) {
