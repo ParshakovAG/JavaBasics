@@ -21,7 +21,7 @@ public class Elevator {
     }
 
     public void moveDown() {
-        currentFloor = currentFloor - 1;
+        currentFloor = currentFloor > minFloor ? currentFloor - 1 : currentFloor;
     }
 
     public void move(int floor) {
