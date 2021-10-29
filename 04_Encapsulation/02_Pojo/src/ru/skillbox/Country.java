@@ -17,7 +17,8 @@ public class Country {
     }
 
     public void add(String name, int population, double square, String capitalName, String seaAccess) {
-        title = title + "\n" + name + population + "тыс. чел." + square + "км/2" + capitalName + seaAccess;
+        title = title + "\n" + name + population + "тыс. чел."
+                + square + "км/2" + capitalName + seaAccess;
     }
 
     public String getName() {
@@ -63,4 +64,10 @@ public class Country {
     public void setTitle(String title) {
         this.title = title;
     }
-}
+
+    public void print() {
+        System.out.println(name + " " + population + " " + square + " " + capitalName + " " + seaAccess);
+    }
+
+    }
+
