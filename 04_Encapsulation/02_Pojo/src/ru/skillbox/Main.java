@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println();
 
-        Country country1 = new Country("Пермь", 2579, 160.2, "Москва", "Нет");
+        Country country1 = new Country("Пермь", 2579, 160000.2, "Москва", "Нет");
         country1.add("", 2579, 160.2, "", "");
         country1.print();
     }
