@@ -66,7 +66,7 @@ public class Country {
     }
 
     public void print() {
-        System.out.println(name + " " + population + "тыс.ч. " + square + "кв.км "
+        System.out.println(name + " " + population + " " + "тыс.ч. " + square + " " + "кв.км "
                 + capitalName + "\n " + "выход к морю: " + seaAccess);
     }
 
