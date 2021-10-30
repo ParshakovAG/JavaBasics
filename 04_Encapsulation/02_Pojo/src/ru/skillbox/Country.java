@@ -17,8 +17,8 @@ public class Country {
     }
 
     public void add(String name, int population, double square, String capitalName, String seaAccess) {
-        title = title + "\n" + name + population + "тыс. чел."
-                + square + "км/2" + capitalName + seaAccess;
+        title = title + "\n" + name + population
+                + square + capitalName + seaAccess;
     }
 
     public String getName() {
@@ -66,7 +66,8 @@ public class Country {
     }
 
     public void print() {
-        System.out.println(name + " " + population + "тыс.ч. " + square + "кв.км " + capitalName + " " + "выход к морю " + seaAccess);
+        System.out.println(name + " " + population + "тыс.ч. " + square + "кв.км "
+                + capitalName + "\n " + "выход к морю: " + seaAccess);
     }
 
     }
