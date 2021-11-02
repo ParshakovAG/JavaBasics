@@ -10,9 +10,6 @@ public class Product {
     }
 
     public void add(String nameProd, int price, int barCode) {
-        name = "Oil";
-        price = 1;
-        barCode = 7;
         name = name + "\n" + price + barCode;
     }
 
@@ -30,5 +27,10 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public void print(String name, int price, int barCode) {
+        System.out.println(name + "\n" + price + " - " + "руб." +
+                "\n" + "штрих код" + " - " + barCode);
     }
 }

@@ -7,14 +7,14 @@ public class Book {
     private final int numberIsbn;
 
     public Book(String nameBook, String author, int pageCount, int numberIsbn) {
-        this.nameBook = nameBook = "Porsche";
+        this.nameBook = nameBook;
         this.author = author = "Sana";
-        this.pageCount = pageCount = 255;
+        this.pageCount = pageCount;
         this.numberIsbn = numberIsbn = 7785641;
     }
 
-    public void add(String nameBook, int pageCount) {
-        nameBook = nameBook + "\n" + author + pageCount + numberIsbn;
+    public void add(String nameBook, int page) {
+        nameBook = nameBook + "\n" + page + author + numberIsbn;
     }
 
     public String getNameBook() {
@@ -31,6 +31,11 @@ public class Book {
 
     public int getNumberIsbn() {
         return numberIsbn;
+    }
+
+    public void print(String nameBook, int pageCount) {
+        System.out.println(nameBook + "\n" + pageCount + " - " + "стр." +
+                "\n" + "Автор" + " - " + author + "\n" + "Номер ISBN" + " - " + numberIsbn);
     }
 
 }
