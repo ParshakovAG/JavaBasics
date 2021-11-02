@@ -13,6 +13,10 @@ public class Book {
         this.numberIsbn = numberIsbn = 7785641;
     }
 
+    public void add(String nameBook, int pageCount) {
+        nameBook = nameBook + "\n" + author + pageCount + numberIsbn;
+    }
+
     public String getNameBook() {
         return nameBook;
     }

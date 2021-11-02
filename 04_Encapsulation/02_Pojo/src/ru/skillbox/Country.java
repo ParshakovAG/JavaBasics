@@ -1,22 +1,34 @@
 package ru.skillbox;
 
 public class Country {
-        private String name;
-        private int population;
-        private double square;
-        private String capitalName;
-        private String seaAccess;
-        private String title;
+    private String name;
+    private int population;
+    private double square;
+    private String capitalName;
+    private boolean seaAccess;
+    private String title;
 
-    public Country(String name, int population, double square, String capitalName, String seaAccess) {
+    public Country(String capitalName) {
+        capitalName += "";
+        this.capitalName = capitalName;
+
+    }
+
+    public Country(String name, int population, double square, String capitalName) {
         this.name = name;
         this.population = population;
         this.square = square;
         this.capitalName = capitalName;
-        this.seaAccess = seaAccess;
+
     }
 
-    public void add(String name, int population, double square, String capitalName, String seaAccess) {
+    boolean a = false, b = true, c;
+
+    {
+        c = a & b;
+    }
+
+    public void add(String name, int population, double square, String capitalName) {
         title = title + "\n" + name + population
                 + square + capitalName + seaAccess;
     }
@@ -53,11 +65,11 @@ public class Country {
         this.capitalName = capitalName;
     }
 
-    public String getSeaAccess() {
+    public boolean getSeaAccess() {
         return seaAccess;
     }
 
-    public void setSeaAccess(String seaAccess) {
+    public void setSeaAccess(boolean seaAccess) {
         this.seaAccess = seaAccess;
     }
 
@@ -68,7 +80,12 @@ public class Country {
     public void print() {
         System.out.println(name + " " + population + " " + "тыс.ч. " + square + " " + "кв.км "
                 + capitalName + "\n " + "выход к морю: " + seaAccess);
+        if (seaAccess = !true) {
+            System.out.println("Да");
+        }
+        System.out.println("Нет");
     }
+}
 
-    }
+
 
