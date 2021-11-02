@@ -7,7 +7,7 @@ public class Main {
         book.add("Java", 599);
         System.out.println(book);
         Product product = new Product("Name");
-
+        product.add("Oil", 50, 1);
         System.out.println(product);
     }
 }
