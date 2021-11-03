@@ -3,7 +3,7 @@ package ru.skillbox;
 public class Main {
 
     public static void main(String[] args) {
-        Country1 country1 = new Country1("", 18, 58, "", false);
+        Country1 country1 = new Country1("Губаха", 18, 58, "Пермь", false);
         country1.add("Губаха", 18, 58, "Пермь");
         country1.print();
 
