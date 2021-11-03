@@ -1,24 +1,26 @@
 package ru.skillbox;
 
-public class Country {
+public class Country3 {
     private String name;
     private int population;
     private double square;
     private String capitalName;
-    private boolean seaAccess;
+    private boolean hasSeaAccess;
     private String title;
 
-    public Country(String capitalName) {
+    public Country3(String capitalName, int population) {
         capitalName += "";
+        this.population = population;
         this.capitalName = capitalName;
 
     }
 
-    public Country(String name, int population, double square, String capitalName) {
+    public Country3(String name, int population, double square, String capitalName, boolean hasSeaAccess) {
         this.name = name;
         this.population = population;
         this.square = square;
         this.capitalName = capitalName;
+        this.hasSeaAccess = hasSeaAccess;
 
     }
 
@@ -30,7 +32,7 @@ public class Country {
 
     public void add(String name, int population, double square, String capitalName) {
         title = title + "\n" + name + population
-                + square + capitalName + seaAccess;
+                + square + capitalName + hasSeaAccess;
     }
 
     public String getName() {
@@ -66,11 +68,11 @@ public class Country {
     }
 
     public boolean getSeaAccess() {
-        return seaAccess;
+        return hasSeaAccess;
     }
 
     public void setSeaAccess(boolean seaAccess) {
-        this.seaAccess = seaAccess;
+        this.hasSeaAccess = seaAccess;
     }
 
     public void setTitle(String title) {
@@ -78,14 +80,11 @@ public class Country {
     }
 
     public void print() {
-        System.out.println(name + " " + population + " " + "тыс.ч. " + square + " " + "кв.км "
-                + capitalName + "\n " + "выход к морю: " + seaAccess);
-        if (seaAccess = !true) {
+        System.out.println(name + " " + population + " " + "чел. " + square + " " + "кв.км "
+                + capitalName + "\n " + "выход к морю: " + hasSeaAccess);
+        if (hasSeaAccess = true) {
             System.out.println("Да");
         }
-        System.out.println("Нет");
+
     }
 }
-
-
-
