@@ -1,27 +1,25 @@
 package ru.skillbox;
 
-public class Country3 {
+public class Country {
     private String name;
     private int population;
     private double square;
     private String capitalName;
-    private boolean hasSeaAccess;
+    private boolean seaAccess;
     private String title;
 
-    public Country3(String capitalName, int population) {
+    public Country(String capitalName) {
         capitalName += "";
-        this.population = population;
         this.capitalName = capitalName;
 
     }
 
-    public Country3(String name, int population, double square, String capitalName, boolean hasSeaAccess) {
+    public Country(String name, int population, double square, String capitalName, boolean hasSeaAccess) {
         this.name = name;
         this.population = population;
         this.square = square;
         this.capitalName = capitalName;
-        this.hasSeaAccess = hasSeaAccess;
-
+        this.seaAccess = hasSeaAccess;
     }
 
     boolean a = false, b = true, c;
@@ -32,7 +30,7 @@ public class Country3 {
 
     public void add(String name, int population, double square, String capitalName) {
         title = title + "\n" + name + population
-                + square + capitalName + hasSeaAccess;
+                + square + capitalName + seaAccess;
     }
 
     public String getName() {
@@ -67,12 +65,12 @@ public class Country3 {
         this.capitalName = capitalName;
     }
 
-    public boolean getSeaAccess() {
-        return hasSeaAccess;
+    public boolean getHasSeaAccess() {
+        return getHasSeaAccess();
     }
 
     public void setSeaAccess(boolean seaAccess) {
-        this.hasSeaAccess = seaAccess;
+        this.seaAccess = seaAccess;
     }
 
     public void setTitle(String title) {
@@ -80,11 +78,15 @@ public class Country3 {
     }
 
     public void print() {
-        System.out.println(name + " " + population + " " + "чел. " + square + " " + "кв.км "
-                + capitalName + "\n " + "выход к морю: " + hasSeaAccess);
-        if (hasSeaAccess = true) {
+        System.out.println(name + " " + population + " " + "тыс.ч. " + square + " " + "кв.км "
+                + capitalName + "\n " + "выход к морю: " + seaAccess);
+        if (seaAccess = false) {
             System.out.println("Да");
         }
-
+        System.out.println("Нет");
     }
+
 }
+
+
+
