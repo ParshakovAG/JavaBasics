@@ -2,17 +2,23 @@ package ru.skillbox;
 
     public class Product {
         private final String name = "";
-        private final int price = 0;
+        private int price;
         private final int barCode;
+
         private String title;
 
-    public Product(String name, int barCode, String title) {
+    public Product(String name, int price, int barCode, String title) {
+        this.price = price;
         this.barCode = barCode;
         this.title = title;
 
     }
 
-    public int setPrice() {
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
         return price;
     }
 
@@ -22,8 +28,16 @@ package ru.skillbox;
 
     public int getBarCode() {
         return barCode;
-
     }
+
+        public String setTitle() {
+            return title;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
 
     public void print(String name, int price, int barCode) {
         System.out.println(name + "\n" + price + " - " + "руб." +

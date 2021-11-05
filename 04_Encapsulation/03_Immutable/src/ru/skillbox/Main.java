@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println();
 
-        Product product = new Product("", 2, "");
+        Product product = new Product("", 50, 6, "");
         product.print("Oil", 50, 777);
     }
 }
