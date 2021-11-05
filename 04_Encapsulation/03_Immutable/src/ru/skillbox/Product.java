@@ -2,12 +2,11 @@ package ru.skillbox;
 
     public class Product {
         private final String name = "";
-        private final int price = 10;
+        private final int price = 0;
         private final int barCode;
         private String title;
 
     public Product(String name, int barCode, String title) {
-
         this.barCode = barCode;
         this.title = title;
 
