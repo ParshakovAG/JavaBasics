@@ -30,10 +30,6 @@ package ru.skillbox;
         return barCode;
     }
 
-        public String setTitle() {
-            return title;
-        }
-
         public String getTitle() {
             return title;
         }
