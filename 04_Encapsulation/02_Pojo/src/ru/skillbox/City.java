@@ -69,8 +69,8 @@ package ru.skillbox;
             this.accessToTheSea = accessToTheSea;
         }
 
-        public boolean getHasAccessToTheSea() {
-            return getHasAccessToTheSea();
+        public boolean hasAccessToTheSea() {
+            return hasAccessToTheSea();
         }
 
         public String getTitle() {
