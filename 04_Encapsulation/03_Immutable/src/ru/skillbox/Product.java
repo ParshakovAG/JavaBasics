@@ -7,7 +7,6 @@ package ru.skillbox;
         private String title;
 
     public Product(String name, int price, int barCode, String title) {
-
         this.price = price;
         this.barCode = barCode;
         this.title = title;
@@ -21,10 +20,6 @@ package ru.skillbox;
     public String getName() {
         return name;
     }
-
-//    public void setName(String name) {
-//        this.name = name;
-//    }
 
     public int getPrice() {
         return price;

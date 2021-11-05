@@ -10,7 +10,7 @@ public class Book {
         this.nameBook = nameBook;
         this.author = author = "Sana";
         this.pageCount = pageCount;
-        this.numberIsbn = numberIsbn = 7785641;
+        this.numberIsbn = numberIsbn = 1010111;
     }
 
     public void add(String nameBook, int page) {

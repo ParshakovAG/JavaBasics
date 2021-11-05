@@ -65,8 +65,8 @@ public class Country {
         this.capitalName = capitalName;
     }
 
-    public boolean getHasSeaAccess() {
-        return getHasSeaAccess();
+    public boolean HasSeaAccess() {
+        return HasSeaAccess();
     }
 
     public void setSeaAccess(boolean seaAccess) {
