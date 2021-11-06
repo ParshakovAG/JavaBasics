@@ -22,12 +22,6 @@ public class Country {
         this.seaAccess = hasSeaAccess;
     }
 
-    boolean a = false, b = true, c;
-
-    {
-        c = a & b;
-    }
-
     public void add(String name, int population, double square, String capitalName) {
         title = title + "\n" + name + population
                 + square + capitalName + seaAccess;

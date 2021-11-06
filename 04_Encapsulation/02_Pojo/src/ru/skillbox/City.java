@@ -23,12 +23,6 @@ package ru.skillbox;
                     + capitalOfCity + accessToTheSea + title;
         }
 
-        boolean a = false, b = true, c;
-
-        {
-            c = a & b;
-        }
-
         public String getName() {
             return name;
         }
