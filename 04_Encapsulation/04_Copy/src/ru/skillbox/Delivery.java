@@ -16,7 +16,9 @@ public class Delivery {
                 this.fragile = true;
         }
 
-        public Delivery(double weight, String address, boolean toFlip, String regNumber, boolean fragile, double cargoVolume) {
+        public Delivery(double weight, String address,
+                        boolean toFlip, String regNumber,
+                        boolean fragile, double cargoVolume) {
                 this.weight = weight;
                 this.address = address;
                 this.toFlip = toFlip;
