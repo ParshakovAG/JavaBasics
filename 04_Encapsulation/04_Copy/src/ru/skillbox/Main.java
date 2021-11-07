@@ -3,14 +3,24 @@ package ru.skillbox;
 public class Main {
 
     public static void main(String[] args) {
-        Delivery delivery = new Delivery(1, "Ленина 1 кв. 2", true, "", true, 6);
+        Delivery delivery = new Delivery(10.2, "Ленина 1 кв. 2", true, "№ 4558", true, 6);
         delivery.setWeight(10.5);
+        delivery.setWeight(11.5);
 
-        Dimensions dimensions = new Dimensions(5, 10, 5);
+//        Delivery copy = new Delivery(delivery.getWeight(),       //Полное копирование
+//                delivery.getAddress(),
+//                delivery.isToFlip(),
+//                delivery.getRegNumber(),
+//                delivery.isFragile());
+
+//        System.out.println(copy);
+
+        Dimensions dimensions = new Dimensions(5, 1.5, 5);
         dimensions.setWeight(16);
-
-        System.out.println(dimensions);
+        
         System.out.println(delivery);
+        System.out.println(dimensions);
+
 
 
     }

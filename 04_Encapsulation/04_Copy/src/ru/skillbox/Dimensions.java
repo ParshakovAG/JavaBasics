@@ -2,12 +2,12 @@ package ru.skillbox;
 
 public class Dimensions {
     private final double width;
-    private final double weight;
+    private final double height;
     private final double lenght;
 
-    public Dimensions(double width, double weight, double lenght) {
+    public Dimensions(double width, double height, double lenght) {
         this.width = width;
-        this.weight = weight;
+        this.height = height;
         this.lenght = lenght;
 
     }
@@ -17,11 +17,11 @@ public class Dimensions {
     }
 
     public Dimensions setWidth(double width) {
-        return new Dimensions(width, weight, lenght);
+        return new Dimensions(width, height, lenght);
     }
 
     public double getWeight() {
-        return weight;
+        return height;
     }
 
     public Dimensions setWeight(double weight) {
@@ -33,18 +33,18 @@ public class Dimensions {
     }
 
     public Dimensions setLenght(double lenght) {
-        return new Dimensions(width, weight, lenght);
+        return new Dimensions(width, height, lenght);
     }
 
     public double cargoVolume(double cargoVol) {
-        return cargoVol = weight * width * lenght;
+        return cargoVol = height * width * lenght;
     }
 
     public String toString() {
-        return "Высота: " + width + "\n"
-                + "Вес: " + weight + "\n"
+        return "Ширина: " + width + "\n"
+                + "Высота: " + height + "\n"
                 + "Длина: " + lenght + "\n"
-                + "Общий объем груза: " + cargoVolume(16);
+                + "Общий объем груза: " + cargoVolume(1);
     }
 
 }
