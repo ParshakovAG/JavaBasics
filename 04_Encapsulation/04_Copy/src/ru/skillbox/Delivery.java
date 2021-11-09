@@ -1,7 +1,7 @@
 package ru.skillbox;
 
 public class Delivery {
-        Dimensions dimensions;
+        private Dimensions dimensions;
         private final double weight;
         private final String address;
         private final boolean toFlip;

@@ -24,8 +24,8 @@ public class Dimensions {
         return height;
     }
 
-    public Dimensions setWeight(double weight) {
-        return new Dimensions(width, weight, lenght);
+    public Dimensions setHeight(double height) {
+        return new Dimensions(width, height, lenght);
     }
 
     public double getLenght() {
@@ -44,7 +44,7 @@ public class Dimensions {
         return "Ширина: " + width + "\n"
                 + "Высота: " + height + "\n"
                 + "Длина: " + lenght + "\n"
-                + "Общий объем груза: " + cargoVolume(1);
+                + "Общий объем груза: " + cargoVolume(1.5);
     }
 
 }
