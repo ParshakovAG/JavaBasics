@@ -36,6 +36,10 @@ public class Dimensions {
         return new Dimensions(width, height, lenght);
     }
 
+    public Dimensions setDelivery(Delivery delivery) {
+        return new Dimensions(width, height, lenght);
+    }
+
     public double cargoVolume(double cargoVol) {
         return cargoVol = height * width * lenght;
     }

@@ -26,6 +26,14 @@ public class Delivery {
                 this.fragile = fragile;
         }
 
+        public Dimensions getDimensions() {
+                return dimensions;
+        }
+
+        public void setDimensions(Dimensions dimensions) {
+                this.dimensions = dimensions;
+        }
+
         public Delivery setWeight(double weight) {
                 return new Delivery(weight, address, toFlip, regNumber, fragile);
         }
