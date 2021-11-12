@@ -6,16 +6,16 @@ public class Dimensions {
     private final double lenght;
 
     public Dimensions(double width, double height, double lenght) {
+        this.width = 0;
+        this.height = 0;
+        this.lenght = 0;
+    }
+
+    public Dimensions(double width, double height, double lenght, double cargoVolume) {
         this.width = width;
         this.height = height;
         this.lenght = lenght;
 
-    }
-
-    public Dimensions(double width, double height, double lenght, double cargoVolume) {
-        this.width = 4;
-        this.height = 4.4;
-        this.lenght = 4;
     }
 
     public double getWidth() {

@@ -17,17 +17,20 @@ public class Main {
         Dimensions dimensions3 = dimensions.setHeight(9);
         Dimensions dimensions4 = dimensions.setLenght(15);
 
+        dimensions = new Dimensions(2.1, 2, 2, 5);
+        Dimensions dimensions5 = dimensions.setLenght(14);
+
         System.out.println(dimensions);
 
-        System.out.println();
+        //System.out.println();
 
-        Delivery copy = new Delivery(delivery.getWeight(),       //Полное копирование
-                delivery.getAddress(),
-                delivery.isToFlip(),
-                delivery.getRegNumber(),
-                delivery.isFragile());
-
-        System.out.println(copy);
+//        Delivery copy = new Delivery(delivery.getWeight(),       //Полное копирование
+//                delivery.getAddress(),
+//                delivery.isToFlip(),
+//                delivery.getRegNumber(),
+//                delivery.isFragile());
+//
+//        System.out.println(copy);
 
 
     }
