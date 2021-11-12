@@ -77,7 +77,7 @@ public class Delivery {
         public String toString () {
                 return "Вес: " + weight + "\n"
                         + "Адрес: " + address + "\n"
-                        + "Можно ли переворачивать? " + toFlip + "\n"
+                        + "Можно ли переворачивать? " + (toFlip ? "Да" : "Нет") + "\n"
                         + "Регистрационный номер: " + regNumber + "\n"
                         + "Хрупкое? " + fragile;
                 }
