@@ -12,6 +12,12 @@ public class Dimensions {
 
     }
 
+    public Dimensions(double width, double height, double lenght, double cargoVolume) {
+        this.width = 4;
+        this.height = 4.4;
+        this.lenght = 4;
+    }
+
     public double getWidth() {
         return width;
     }

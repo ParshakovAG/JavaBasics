@@ -16,9 +16,7 @@ public class Delivery {
                 this.fragile = true;
         }
 
-        public Delivery(double weight, String address,
-                        boolean toFlip, String regNumber,
-                        boolean fragile, double cargoVolume) {
+        public Delivery(double weight, String address, boolean toFlip, String regNumber,boolean fragile, double cargoVolume) {
                 this.weight = weight;
                 this.address = address;
                 this.toFlip = toFlip;
@@ -79,7 +77,7 @@ public class Delivery {
                         + "Адрес: " + address + "\n"
                         + "Можно ли переворачивать? " + (toFlip ? "Да" : "Нет") + "\n"
                         + "Регистрационный номер: " + regNumber + "\n"
-                        + "Хрупкое? " + fragile;
+                        + "Хрупкое? " + (fragile ? "Да" : "Нет");
                 }
 
         }
