@@ -9,21 +9,18 @@ public class Main {
         Delivery delivery3 = delivery.setRegNumber("ASD21500");
         Delivery delivery4 = delivery.setToFlip(false);
 
-        System.out.println(delivery);
-
         Dimensions dimensions = new Dimensions(1, 1.5, 5);
         Dimensions dimensions1 = dimensions.setLenght(50);
         Dimensions dimensions2 = dimensions.setWidth(7);
         Dimensions dimensions3 = dimensions.setHeight(9);
-        Dimensions dimensions4 = dimensions.setLenght(15);
 
-        dimensions = new Dimensions(2.1, 2, 2, 5);
-        Dimensions dimensions5 = dimensions.setLenght(14);
+        dimensions = new Dimensions(50, 7, 9, 5);
 
+        System.out.println(delivery);
         System.out.println(dimensions);
 
-        //System.out.println();
-
+//        System.out.println();
+//
 //        Delivery copy = new Delivery(delivery.getWeight(),       //Полное копирование
 //                delivery.getAddress(),
 //                delivery.isToFlip(),
