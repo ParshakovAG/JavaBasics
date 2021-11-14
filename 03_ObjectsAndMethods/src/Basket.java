@@ -6,6 +6,9 @@ public class Basket {
     private int limit;
     private double weight;
     private double totalWeight = 0;
+    private static int totalPriceBasket;
+    private static double totalWeightBasket;
+    public static int countBasket = 0;
 
     public Basket() {
         increaseCount(1);
@@ -18,10 +21,16 @@ public class Basket {
         this.limit = limit;
     }
 
-    public Basket(String items, int totalPrice) {
+    public Basket(String items, int totalPrice, double totalWeight) {
         this();
         this.items = this.items + items;
         this.totalPrice = totalPrice;
+        this.totalWeight = totalWeight;
+    }
+
+    public int getCountBasket() {
+
+        return countBasket;
     }
 
     public static int getCount() {
@@ -32,29 +41,48 @@ public class Basket {
         Basket.count = Basket.count + count;
     }
 
-    public void add(String name, int price, int count)
-            {add(name, price, 1, 500);}
+    private static void addTotalPriceBasket(int price) {
+        totalPriceBasket += price;
+    }
+
+    private static void addTotalWeightBasket(double weight) {
+        totalWeightBasket += weight;
+    }
+
+    public void add(String name, int price, int count) {
+        add(name, price, 1, weight);
+    }
 
     public void add(String name, int price, int count, double weight) {
-        boolean error = false;
-        if (contains(name)) {
-            error = true;
-        }
+        items += "\n" + name + " - " + count + " шт. - " + price + " р. " + weight + " гр.";
+        this.totalPrice += price * count;
+        this.totalWeight += weight * count;
+        addTotalPriceBasket(price);
+        addTotalWeightBasket(weight);
+    }
 
-        if (totalPrice + count * price >= limit) {
-            error = true;
-        }
+    public static String getTotalWeightBasket() {
+        String total;
+        total = "Общий вес всех корзин: " + totalWeightBasket;
+        return total;
+    }
 
-        if (error) {
-            System.out.println("Error occured :(");
-            return;
-        }
+    public static String getTotalPriceBasket() {
+        String total;
+        total = "Общая стоимость всех корзин: " + totalPriceBasket;
+        return total;
+    }
 
-        items = items + "\n" + name + " - " +
-            count + " шт. - " + price + "руб." + " - "
-                + weight + " гр.";
-        totalPrice = totalPrice + count * price;
-        totalWeight = totalWeight + count * weight;
+    public String getTotalPrice() {
+        String total;
+        total = "Общая стоимость корзины: " + totalPrice;
+        return total;
+    }
+
+    public String getTotalWeight() {
+        String total;
+        total = "Общий вес корзины: " + totalWeight;
+        return total;
     }
 
     public void clear() {
@@ -63,14 +91,9 @@ public class Basket {
         totalWeight = 0;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
-    }
-    public double getTotalWeight(){
-        return totalWeight;
-    }
 
     public boolean contains(String name) {
+
         return items.contains(name);
     }
 
