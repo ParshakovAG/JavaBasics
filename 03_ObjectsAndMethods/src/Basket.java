@@ -5,9 +5,12 @@ public class Basket {
     private int totalPrice = 0;
     private int limit;
     private double weight;
+    private int cost;
     private double totalWeight = 0;
     private static int totalPriceBasket;
     private static double totalWeightBasket;
+    private static int totalCostAllBasket;
+    private static int totalQuantityAllGoods;
     public static int countBasket = 0;
 
     public Basket() {
@@ -26,11 +29,7 @@ public class Basket {
         this.items = this.items + items;
         this.totalPrice = totalPrice;
         this.totalWeight = totalWeight;
-    }
-
-    public int getCountBasket() {
-
-        return countBasket;
+        this.cost = this.cost + cost;
     }
 
     public static int getCount() {
@@ -49,6 +48,14 @@ public class Basket {
         totalWeightBasket += weight;
     }
 
+    private static void addTotalCostAllBasket(int totalCostAllBasket) {
+        totalCostAllBasket += countBasket;
+    }
+
+    private static void addTotalQuantityAllGoods(int totalQuantityAllGoods) {
+        totalQuantityAllGoods += count;
+    }
+
     public void add(String name, int price, int count) {
         add(name, price, 1, weight);
     }
@@ -59,17 +66,48 @@ public class Basket {
         this.totalWeight += weight * count;
         addTotalPriceBasket(price);
         addTotalWeightBasket(weight);
+        addTotalCostAllBasket(cost);
     }
 
     public static String getTotalWeightBasket() {
         String total;
-        total = "Общий вес всех корзин: " + totalWeightBasket;
+        total = "Общий вес всех корзин: "
+                + totalWeightBasket;
         return total;
     }
 
     public static String getTotalPriceBasket() {
         String total;
-        total = "Общая стоимость всех корзин: " + totalPriceBasket;
+        total = "Общая стоимость всех корзин: "
+                + totalPriceBasket;
+        return total;
+    }
+
+    public static String getTotalCostAllBasket() {
+        String total;
+        total = "Общее количество корзин: "
+                + totalCostAllBasket;
+        return total;
+    }
+
+    public static String getTotalQuantityAllGoods() {
+        String total;
+        total = "Общее количество всех товаров: "
+                + totalQuantityAllGoods;
+        return total;
+    }
+
+    public static String getTotalCostAllBasketToTotalQuantityAllGoods() {
+        String total;
+        total = "Отношение общей стоимости всех корзин к общему количеству всех товаров: "
+                + (totalCostAllBasket / totalQuantityAllGoods);
+        return total;
+    }
+
+    public static String getTotalPriceBasketToCountBasket() {
+        String total;
+        total = "Отношение общей стоимости всех корзин к количеству корзин: "
+                + (totalPriceBasket / countBasket);
         return total;
     }
 
