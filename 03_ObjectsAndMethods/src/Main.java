@@ -2,19 +2,20 @@ public class Main {
 
     public static void main(String[] args) {
         Basket basket = new Basket();
-        basket.add("Milk", 40, 1, 500);
+        basket.add("Milk", 68, 1, 500, 1);
         basket.print("Корзина 1 \n");
 
         System.out.println();
 
         Basket vanyaBasket = new Basket();
-        basket.add("Egg", 50, 10, 450);
-        basket.print("Корзина Вани \n");
+        vanyaBasket.add("Egg", 76, 10, 700, 1);
+        vanyaBasket.add("Oil", 45, 1, 250, 1);
+        vanyaBasket.print("Корзина Вани \n");
 
         System.out.println();
 
         Basket sanyaBasket = new Basket();
-        sanyaBasket.add("Chocolate", 100, 1, 45);
+        sanyaBasket.add("Chocolate", 110, 1, 90, 1);
         sanyaBasket.print("Корзина Сани \n");
 
         System.out.println();

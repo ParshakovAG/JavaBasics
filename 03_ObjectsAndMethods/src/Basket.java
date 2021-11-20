@@ -4,7 +4,7 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
-    private double weight;
+    private double weight = 0;
     private double totalWeight = 0;
     private static int totalPriceBasket;
     private static double totalWeightBasket;
@@ -54,13 +54,13 @@ public class Basket {
         totalQuantityAllGoods += count;
     }
 
-    public void add(String name, int price, int count, int totalQuantityAllGoods) {
-        add(name, price, 1, 500, totalQuantityAllGoods);
+    public void add(String name, int price, double weight) {
+        add(name, price, weight);
     }
 
     public void add(String name, int price, int count, double weight, int totalQuantityAllGoods) {
         items += "\n" + name + " - " + count + " шт. - " + price + " р. " + weight + " гр."
-                + "\n" + "Общее количество товаров" + " - " + count + "шт.";
+                + "\n" + "Общее количество товаров" + " - " + totalQuantityAllGoods + "шт.";
         this.totalPrice += price * count;
         this.totalWeight += weight * count;
         addTotalPriceBasket(price);
@@ -134,7 +134,6 @@ public class Basket {
             System.out.println("Вес корзины - 0");
         } else {
             System.out.println(items);
-            System.out.println("Вес корзины " + totalWeight + "гр.");
         }
     }
 }
