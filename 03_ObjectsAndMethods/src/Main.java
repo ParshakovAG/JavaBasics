@@ -22,7 +22,9 @@ public class Main {
         basket = new Basket();
         basket.print(Basket.getTotalWeightBasket());
         basket.print(Basket.getTotalPriceBasket());
-        basket.print(Basket.getTotalCountBasket());
+
+        System.out.println();
+
         basket.print(Basket.getTotalQuantityAllGoods());
         basket.print(Basket.getTotalPriceBasketToCountBasket());
         basket.print(Basket.getTotalCostAllBasketToTotalQuantityAllGoods());
