@@ -7,9 +7,9 @@ public class Basket {
     private int limit;
     private double weight = 0;
     private double totalWeight = 0;
-    private static int totalPriceBasket;
+    private static double totalPriceBasket;
     private static double totalWeightBasket;
-    private static int totalQuantityAllGoods;
+    private static double totalQuantityAllGoods;
 
     public Basket() {
         increaseCount(1);
@@ -48,7 +48,7 @@ public class Basket {
         totalWeightBasket += weight;
     }
 
-    public static void addTotalQuantityAllGoods(int totalQuantityAllGoods) {
+    public static void addTotalQuantityAllGoods(double totalQuantityAllGoods) {
         totalQuantityAllGoods += count;
     }
 
@@ -56,7 +56,7 @@ public class Basket {
         add(name, price, weight);
     }
 
-    public void add(String name, double price, int count, double weight, int totalQuantityAllGoods) {
+    public void add(String name, double price, int count, double weight, double totalQuantityAllGoods) {
         items += "\n" + name + " - " + count + " шт. - " + price + " р. " + weight + " гр."
                 + "\n" + "Общее количество товаров" + " - " + totalQuantityAllGoods + "шт.";
         this.totalPrice += price * count;
