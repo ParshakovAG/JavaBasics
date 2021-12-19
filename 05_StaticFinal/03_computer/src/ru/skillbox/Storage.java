@@ -4,7 +4,6 @@ public class Storage {
     private StorageType type;
 
     private final int diskStorageType;
-    //private final int storageCapacity;
     private final String name;
     private final String vendor;
     private final double diskWeight;
@@ -12,7 +11,6 @@ public class Storage {
     public Storage(StorageType type, int diskStorageType, String name, String vendor, double diskWeight) {
         this.type = type;
         this.diskStorageType = diskStorageType;
-        //this.storageCapacity = storageCapacity;
         this.name = name;
         this.vendor = vendor;
         this.diskWeight = diskWeight;
@@ -29,10 +27,6 @@ public class Storage {
     public int getDiskStorageType() {
         return diskStorageType;
     }
-
-//    public int getStorageCapacity() {
-//        return storageCapacity;
-//    }
 
     public String getName() {
         return name;

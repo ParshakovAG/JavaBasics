@@ -1,6 +1,12 @@
 package ru.skillbox;
 
 public class Screen {
+
+    public double getScreenWeight() {
+        return screenWeight;
+    }
+
+    private final double screenWeight;
     public ScreenType getType() {
         return type;
     }
@@ -12,7 +18,8 @@ public class Screen {
 
     private final String vendor;
 
-    public Screen(ScreenType type, String vendor) {
+    public Screen(double screenWeight, ScreenType type, String vendor) {
+        this.screenWeight = screenWeight;
         this.type = type;
         this.vendor = vendor;
     }

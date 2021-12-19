@@ -30,7 +30,8 @@ public class Computer {
     }
 
     public Cpu setFrequency(double frequency) {
-        return new Cpu(frequency, cores, name, vendor, cpu, ram, storage, screen, keyboard);
+        double cpuWeight = 4.0;
+        return new Cpu(frequency, cores, name, vendor, cpu, ram, storage, screen, keyboard, cpuWeight);
     }
 
     public double getCores() {
@@ -52,20 +53,16 @@ public class Computer {
 
         public double totalWeight;
 
-        public double getTotalWeight() {
-            return totalWeight;
-        }
-
-
         public String toString(){return "Производитель ПК: "
-                + vendor + "\n"
-                + "Имя ПК: " + name + "\n"
-                + "Модель процессора: " + cpu + "\n" +
-                "Оперативная память: " + ram + " Gb" + "\n"
+                + getVendor() + "\n"
+                + "Имя ПК: " + getName() + "\n"
+                + "Модель процессора: " + getCpu() + "\n"
+                + "Частота процессора: " + getFrequency() + "\n"
+                + "Оперативная память: " + ram + " Gb" + "\n"
                 + "Накопитель данных: " + storage + "\n"
                 + "Экран: " + screen + "\n"
-                + "Клавиатура " + keyboard + "\n" +
-                "Общий вес компьютера: " + totalWeight + " грамм";
+                + "Клавиатура: " + keyboard + "\n"
+                + "Общий вес компьютера: " + totalWeight + " грамм";
 
         }
     }
