@@ -23,7 +23,7 @@ public class Printer {
     }
 
     public void append(String text, String name, int pages) {
-        queue = queue + "Текст для вывода на печать: " + text + "\n" + "Название документа: "
+        queue = queue + "\n" + "Текст для вывода на печать: " + text + "\n" + "Название документа: "
                 + name + "\n" + "Количество страниц: " + pages + "\n";
         pendingPagesCount += pages;
         Printer.count = Printer.count + pages;
@@ -49,7 +49,7 @@ public class Printer {
 
     public static int getLifeTimePrintedPages() {
         lifeTimePrintedPages += count;
-        System.out.println("Общее количество страниц за все время существования объекта Printer: ");
+        System.out.println("Общее количество страниц за все время существования объекта Printer:");
         return lifeTimePrintedPages;
     }
 }

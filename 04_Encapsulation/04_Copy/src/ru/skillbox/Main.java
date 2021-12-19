@@ -19,16 +19,5 @@ public class Main {
         System.out.println(delivery);
         System.out.println(dimensions);
 
-//        System.out.println();
-//
-//        Delivery copy = new Delivery(delivery.getWeight(),       //Полное копирование
-//                delivery.getAddress(),
-//                delivery.isToFlip(),
-//                delivery.getRegNumber(),
-//                delivery.isFragile());
-//
-//        System.out.println(copy);
-
-
     }
 }

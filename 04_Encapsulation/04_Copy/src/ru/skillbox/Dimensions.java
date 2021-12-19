@@ -50,7 +50,7 @@ public class Dimensions {
         return "Ширина: " + width + "\n"
                 + "Высота: " + height + "\n"
                 + "Длина: " + lenght + "\n"
-                + "Общий объем груза: " + cargoVolume(1.5);
+                + "Общий объем груза: " + cargoVolume(1);
     }
 
 }
