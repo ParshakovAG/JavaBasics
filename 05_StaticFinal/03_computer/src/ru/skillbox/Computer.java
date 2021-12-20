@@ -29,9 +29,9 @@ public class Computer {
         return frequency;
     }
 
-    public Cpu setFrequency(double frequency) {
+    public Cpu setFrequency(double frequency, double cpuFrequency, double cpuCores) {
         double cpuWeight = 4.0;
-        return new Cpu(frequency, cores, name, vendor, cpu, ram, storage, screen, keyboard, cpuWeight);
+        return new Cpu(frequency, cores, name, vendor, cpu, ram, storage, screen, keyboard, cpuCores, cpuFrequency, cpuWeight);
     }
 
     public double getCores() {
@@ -50,21 +50,31 @@ public class Computer {
         this.keyboard = keyboard;
         this.totalWeight = totalWeight;
     }
+//    public double calculateTotalWeight() {
+//       return totalWeight = cpu.getCpuWeight + ram.getRamWeight() +
+//                storage.getStorageWeight() + screen.getScreenWeight() + keyboard.getKeyboardWeight();
+//    }
 
-        public double totalWeight;
-
-        public String toString(){return "Производитель ПК: "
-                + getVendor() + "\n"
-                + "Имя ПК: " + getName() + "\n"
-                + "Модель процессора: " + getCpu() + "\n"
-                + "Частота процессора: " + getFrequency() + "\n"
-                + "Оперативная память: " + ram + " Gb" + "\n"
-                + "Накопитель данных: " + storage + "\n"
-                + "Экран: " + screen + "\n"
-                + "Клавиатура: " + keyboard + "\n"
-                + "Общий вес компьютера: " + totalWeight + " грамм";
-
-        }
+    public double getTotalWeight() {
+        return totalWeight;
     }
+
+    public double totalWeight;
+
+    public String toString() {
+        return
+                "Производитель ПК: " + getVendor() + "\n"
+                        + "Имя ПК: " + getName() + "\n"
+                        + "Модель процессора: " + getCpu() + "\n"
+                        + "Количество ядер: " + getCores() + "\n"
+                        + "Частота процессора: " + getFrequency() + "\n"
+                        + "Оперативная память: " + ram + " Gb" + "\n"
+                        + "Накопитель данных: " + storage + "\n"
+                        + "Экран: " + screen + " 24' " + ScreenType.LED + "\n"
+                        + "Клавиатура: " + keyboard + " " + "Подсветка? " + " есть" + "\n"
+                        + "Общий вес компьютера: " + totalWeight + " грамм";
+
+    }
+}
 
 

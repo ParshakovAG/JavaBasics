@@ -17,5 +17,5 @@ public class Ram {
         this.ramWeight = ramWeight;
     }
 
-    }
+}
 
