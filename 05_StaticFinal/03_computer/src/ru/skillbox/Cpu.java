@@ -5,6 +5,14 @@ public class Cpu {
     private final double cpuCores;
     private final double cpuFrequency;
 
+    public double getCpuCores() {
+        return cpuCores;
+    }
+
+    public double getCpuFrequency() {
+        return cpuFrequency;
+    }
+
     public void setType(CpuType type) {
         this.type = type;
     }

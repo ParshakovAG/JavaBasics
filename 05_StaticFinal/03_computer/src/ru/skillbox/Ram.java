@@ -6,7 +6,31 @@ public class Ram {
     private final String RamType;
     private final int RamCapacity;
     private final String vendor;
-    private final double ramWeight;
+    public final double ramWeight;
+
+    public ru.skillbox.RamType getType() {
+        return type;
+    }
+
+    public double getRamFrequency() {
+        return RamFrequency;
+    }
+
+    public String getRamType() {
+        return RamType;
+    }
+
+    public int getRamCapacity() {
+        return RamCapacity;
+    }
+
+    public String getVendor() {
+        return vendor;
+    }
+
+    public double getRamWeight() {
+        return ramWeight;
+    }
 
     public Ram(ru.skillbox.RamType type, double ramFrequency, String ramType, int ramCapacity, String vendor, double ramWeight) {
         this.type = type;
