@@ -23,11 +23,17 @@ public class Cpu {
 
     private final double cpuWeight;
 
-    public Cpu(double v, double frequency, String name, String vendor,
-               String cpu, double cores, String storage, String screen, String keyboard, double cpuCores, double cpuFrequency, double cpuWeight) {
+    public Cpu(String name, String vendor,
+               String cpu, String storage, String screen, String keyboard, double cpuCores, double cpuFrequency, double cpuWeight) {
         this.cpuCores = cpuCores;
         this.cpuFrequency = cpuFrequency;
 
         this.cpuWeight = cpuWeight;
+    }
+
+    public String toString() {
+        return "Количество ядер процессора: " + getCpuCores() + "\n"
+                + "Частота процессора: " + getCpuFrequency() + "\n"
+                + "Вес процессора: " + getCpuWeight();
     }
 }
