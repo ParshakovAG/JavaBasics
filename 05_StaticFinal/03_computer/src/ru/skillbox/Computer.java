@@ -61,7 +61,7 @@ public class Computer {
     private double totalWeight;
 
     private double calculateTotalWeight() {
-        return totalWeight = cpu.getCpuWeight() + ram.getRamWeight() + storage.getDiskWeight() + screen.getScreenWeight()
+        return totalWeight = cpu.getCpuWeight() + ram.getRamWeight() + storage.getStorageWeight() + screen.getScreenWeight()
         + keyboard.getKeyboardWeight();
     }
 
@@ -71,7 +71,7 @@ public class Computer {
                         + "Имя ПК: " + getName() + "\n"
                         + "Модель процессора: " + getCpu() + "\n"
                         + "Оперативная память: " + getRam() + "\n"
-                        + "Накопитель данных: " + getStorage() + "Объем памяти: " + getStorage().getDiskSpace() + "\n"
+                        + "Накопитель данных: " + getStorage() + "Объем памяти: " + getStorage().getStorageSpace() + "\n"
                         + "Экран: " + getScreen() + "\n"
                         + "Клавиатура: " + getKeyboard() + "\n"
                         + "Общий вес компьютера: " + totalWeight + " к/г ";

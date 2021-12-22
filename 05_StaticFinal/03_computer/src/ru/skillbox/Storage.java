@@ -5,24 +5,24 @@ public class Storage {
 
     private final String name;
     private final String vendor;
-    private final int diskSpace;
+    private final int storageSpace;
 
-    public int getDiskSpace() {
-        return diskSpace;
+    public int getStorageSpace() {
+        return storageSpace;
     }
 
-    private final double diskWeight;
+    private final double storageWeight;
 
-    public Storage(StorageType type, String name, String vendor, int diskSpace, double diskWeight) {
+    public Storage(StorageType type, String name, String vendor, int storageSpace, double storageWeight) {
         this.type = type;
         this.name = name;
         this.vendor = vendor;
-        this.diskSpace = diskSpace;
-        this.diskWeight = diskWeight;
+        this.storageSpace = storageSpace;
+        this.storageWeight = storageWeight;
     }
 
     public Storage setStorage(StorageType ssd, String name, String vendor, double diskWeight) {
-        return new Storage(type, "ST500Q", "WD", diskSpace, 0.4);
+        return new Storage(type, "ST500Q", "WD", storageSpace, 0.4);
     }
 
     public StorageType getType() {
@@ -37,15 +37,15 @@ public class Storage {
         return vendor;
     }
 
-    public double getDiskWeight() {
-        return diskWeight;
+    public double getStorageWeight() {
+        return storageWeight;
     }
 
     public String toString() {
         return "Производитель: " + getVendor() + "\n"
                 + "Модель: " + getName() + "\n"
                 + "Тип накопителя: " + getType() + "\n"
-                + "Вес накопителя данных: " + getDiskWeight() + "\n";
+                + "Вес накопителя данных: " + getStorageWeight() + "\n";
     }
 
 }
