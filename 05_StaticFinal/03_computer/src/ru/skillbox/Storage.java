@@ -3,29 +3,30 @@ package ru.skillbox;
 public class Storage {
     private StorageType type;
 
-    private final int diskStorageType;
     private final String name;
     private final String vendor;
+    private final int diskSpace;
+
+    public int getDiskSpace() {
+        return diskSpace;
+    }
+
     private final double diskWeight;
 
-    public Storage(StorageType type, int diskStorageType, String name, String vendor, double diskWeight) {
+    public Storage(StorageType type, String name, String vendor, int diskSpace, double diskWeight) {
         this.type = type;
-        this.diskStorageType = diskStorageType;
         this.name = name;
         this.vendor = vendor;
+        this.diskSpace = diskSpace;
         this.diskWeight = diskWeight;
     }
 
-    public Storage setStorage(StorageType ssd, int diskStorageType, String name, String vendor, double diskWeight) {
-        return new Storage(type, diskStorageType, "ST500Q", "WD", 0.4);
+    public Storage setStorage(StorageType ssd, String name, String vendor, double diskWeight) {
+        return new Storage(type, "ST500Q", "WD", diskSpace, 0.4);
     }
 
     public StorageType getType() {
         return type;
-    }
-
-    public int getDiskStorageType() {
-        return diskStorageType;
     }
 
     public String getName() {
@@ -40,5 +41,11 @@ public class Storage {
         return diskWeight;
     }
 
+    public String toString() {
+        return "Производитель: " + getVendor() + "\n"
+                + "Модель: " + getName() + "\n"
+                + "Тип накопителя: " + getType() + "\n"
+                + "Вес накопителя данных: " + getDiskWeight() + "\n";
+    }
 
 }

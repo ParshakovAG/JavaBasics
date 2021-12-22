@@ -1,6 +1,7 @@
 package ru.skillbox;
 
 public class Ram {
+
     private final RamType type;
     private final double RamFrequency;
     private final String RamType;
@@ -32,7 +33,7 @@ public class Ram {
         return ramWeight;
     }
 
-    public Ram(ru.skillbox.RamType type, double ramFrequency, String ramType, int ramCapacity, String vendor, double ramWeight) {
+    public Ram(RamType type, double ramFrequency, String ramType, int ramCapacity, String vendor, double ramWeight) {
         this.type = type;
         RamFrequency = ramFrequency;
         RamType = ramType;
@@ -41,5 +42,12 @@ public class Ram {
         this.ramWeight = ramWeight;
     }
 
+    public String toString() {
+        return "Производитель: " + getVendor() + "\n"
+                + "Чачтота: " + getRamFrequency() + "\n"
+                + "Тип памяти: " + getRamType() + "\n"
+                + "Объем памяти: " + getRamCapacity() + "\n"
+                + "Вес: " + getRamWeight() + "\n";
+    }
 }
 

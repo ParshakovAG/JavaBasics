@@ -25,4 +25,10 @@ public class Screen {
         this.type = type;
         this.vendor = vendor;
     }
+
+    public String toString() {
+        return "Производитель: " + getVendor() + "\n"
+                + "Тип: " + getType() + "\n"
+                + "Вес экрана: " + getScreenWeight() + "\n";
+    }
 }

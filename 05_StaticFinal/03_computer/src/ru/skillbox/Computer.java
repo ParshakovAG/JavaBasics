@@ -58,9 +58,9 @@ public class Computer {
         return totalWeight;
     }
 
-    public double totalWeight;
+    private double totalWeight;
 
-    public double calculateTotalWeight() {
+    private double calculateTotalWeight() {
         return totalWeight = cpu.getCpuWeight() + ram.getRamWeight() + storage.getDiskWeight() + screen.getScreenWeight()
         + keyboard.getKeyboardWeight();
     }
@@ -69,14 +69,14 @@ public class Computer {
         return
                 "Производитель ПК: " + getVendor() + "\n"
                         + "Имя ПК: " + getName() + "\n"
-                        + "Модель процессора: " + getCpu() + "\n"
+                       // + "Модель процессора: " + getCpu() + "\n"
                         + "Количество ядер: " + getCpu().getCpuCores() + "\n"
                         + "Частота процессора: " + getCpu().getCpuFrequency() + "\n"
-                        + "Оперативная память: " + ram + " Gb" + "Тип памяти: " + getRam().getRamType() + "\n"
-                        + "Накопитель данных: " + StorageType.SSD + "\n"
-                        + "Экран: " + screen + " 24' " + ScreenType.LED + "\n"
-                        + "Клавиатура: " + keyboard + " " + "Подсветка? " + " есть" + "\n"
-                        + "Общий вес компьютера: " + totalWeight + " грамм";
+                        + "Оперативная память: " + getRam() + "\n"
+                        + "Накопитель данных: " + getStorage() + "Объем памяти: " + getStorage().getDiskSpace() + "\n"
+                        + "Экран: " + getScreen() + "\n"
+                        + "Клавиатура: " + getKeyboard() + "\n"
+                        + "Общий вес компьютера: " + totalWeight + " к/г ";
 
     }
 }
