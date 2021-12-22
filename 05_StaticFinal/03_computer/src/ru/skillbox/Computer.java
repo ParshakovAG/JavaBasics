@@ -69,9 +69,7 @@ public class Computer {
         return
                 "Производитель ПК: " + getVendor() + "\n"
                         + "Имя ПК: " + getName() + "\n"
-                       // + "Модель процессора: " + getCpu() + "\n"
-                        + "Количество ядер: " + getCpu().getCpuCores() + "\n"
-                        + "Частота процессора: " + getCpu().getCpuFrequency() + "\n"
+                        + "Модель процессора: " + getCpu() + "\n"
                         + "Оперативная память: " + getRam() + "\n"
                         + "Накопитель данных: " + getStorage() + "Объем памяти: " + getStorage().getDiskSpace() + "\n"
                         + "Экран: " + getScreen() + "\n"
