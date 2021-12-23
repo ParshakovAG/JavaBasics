@@ -8,7 +8,7 @@ public class Main {
         Ram pc3 = new Ram(2400, "DDR4", 8, 0.425);
         Storage pc2 = new Storage("SSD", 512, 0.200);
         Screen pc4 = new Screen(ScreenType.LED, 24.3, 5.600);
-        Keyboard pc5 = new Keyboard(KeyboardType.LIGHT, "320M", "Oklick", 0.500);
+        Keyboard pc5 = new Keyboard(KeyboardType.LIGHT, "320M", "Oklick", 0.500, true);
 
         Computer pc6 = new Computer("PC User", "Intel", pc1, pc3, pc2, pc4, pc5, 10.6);
 
