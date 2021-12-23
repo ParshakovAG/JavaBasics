@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Processor pc1 = new Processor(3.2, 4, 2.700);
+        Processor pc1 = new Processor(3.2, 4, 0.700);
         Ram pc3 = new Ram(2400, "DDR4", 8, 0.425);
-        Storage pc2 =new Storage("SSD", 512, 0.200);
+        Storage pc2 = new Storage("SSD", 512, 0.200);
         Screen pc4 = new Screen(ScreenType.LED, 24.3, 5.600);
         Keyboard pc5 = new Keyboard(KeyboardType.LIGHT, "320M", "Oklick", 0.500);
 
