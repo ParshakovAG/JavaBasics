@@ -24,8 +24,7 @@ public class Keyboard {
         return vendor;
     }
 
-    public Keyboard(KeyboardType type, String name, String vendor, double keyboardWeight, boolean keyboardLight) {
-        this.type = type;
+    public Keyboard(String name, String vendor, double keyboardWeight, boolean keyboardLight) {
         this.name = name;
         this.vendor = vendor;
         this.keyboardWeight = keyboardWeight;
