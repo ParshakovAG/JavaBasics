@@ -3,7 +3,7 @@ package ru.skillbox;
 public class Screen {
 
     private ScreenType type;
-
+    private final double size;
     private final double screenWeight;
 
     public double getScreenWeight() {
@@ -14,21 +14,24 @@ public class Screen {
         return type;
     }
 
-    public String getVendor() {
-        return vendor;
+    public void setType(ScreenType type) {
+        this.type = type;
     }
 
-    private final String vendor;
+    public double getSize() {
+        return size;
+    }
 
-    public Screen(double screenWeight, ScreenType type, String vendor) {
-        this.screenWeight = screenWeight;
+    public Screen(ScreenType type, double size, double screenWeight) {
         this.type = type;
-        this.vendor = vendor;
+        this.size = size;
+        this.screenWeight = screenWeight;
     }
 
     public String toString() {
-        return "Производитель: " + getVendor() + "\n"
-                + "Тип: " + getType() + "\n"
-                + "Вес экрана: " + getScreenWeight() + "\n";
+        return "Тип экрана: " + getType() + "\n"
+                + "Размер: " + getSize() + " дюймов " + "\n"
+                + "Вес экрана: " + getScreenWeight() + " к/г " + "\n";
     }
 }
+

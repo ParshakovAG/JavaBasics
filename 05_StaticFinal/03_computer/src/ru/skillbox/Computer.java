@@ -2,81 +2,75 @@ package ru.skillbox;
 
 public class Computer {
 
-    private final String vendor;
-    private final String name;
+private Processor processor;
+private Ram ram;
+private Storage storage;
+private Screen screen;
+private Keyboard keyboard;
+private double totalWeight;
 
-    private final Cpu cpu;
-    private final Ram ram;
-    private final Storage storage;
-    private final Screen screen;
-    private final Keyboard keyboard;
+private final String name;
+private final String vendor;
 
-    public Computer(String vendor, String name, Cpu cpu, Ram ram, Storage storage, Screen screen, Keyboard keyboard, double totalWeight) {
-        this.vendor = vendor;
-        this.name = name;
-        this.cpu = cpu;
+public Computer(String name, String vendor, Processor processor, Ram ram, Storage storage,
+        Screen screen, Keyboard keyboard, double totalWeight) {
+        this.processor = processor;
         this.ram = ram;
         this.storage = storage;
         this.screen = screen;
         this.keyboard = keyboard;
+        this.name = name;
+        this.vendor = vendor;
         this.totalWeight = calculateTotalWeight();
-    }
+        }
 
-    public void setTotalWeight(double totalWeight) {
-        this.totalWeight = totalWeight;
-    }
+public Processor getProcessor() {
+        return processor;
+        }
 
-    public String getVendor() {
-        return vendor;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Cpu getCpu() {
-        return cpu;
-    }
-
-    public Ram getRam() {
+public Ram getRam() {
         return ram;
-    }
+        }
 
-    public Storage getStorage() {
+public Storage getStorage() {
         return storage;
-    }
+        }
 
-    public Screen getScreen() {
+public Screen getScreen() {
         return screen;
-    }
+        }
 
-    public Keyboard getKeyboard() {
+public Keyboard getKeyboard() {
         return keyboard;
-    }
+        }
 
-    public double getTotalWeight() {
+public String getName() {
+        return name;
+        }
+
+public String getVendor() {
+        return vendor;
+        }
+
+public double getTotalWeight() {
         return totalWeight;
-    }
+        }
 
-    private double totalWeight;
+private double calculateTotalWeight() {
+        return totalWeight = processor.getProcessorWeight() + ram.getRamWeight() + storage.getStorageWeight()
+        + screen.getScreenWeight() + keyboard.getKeyboardWeight();
+        }
 
-    private double calculateTotalWeight() {
-        return totalWeight = cpu.getCpuWeight() + ram.getRamWeight() + storage.getStorageWeight() + screen.getScreenWeight()
-        + keyboard.getKeyboardWeight();
-    }
-
-    public String toString() {
-        return
-                "Производитель ПК: " + getVendor() + "\n"
-                        + "Имя ПК: " + getName() + "\n"
-                        + "Модель процессора: " + getCpu() + "\n"
-                        + "Оперативная память: " + getRam() + "\n"
-                        + "Накопитель данных: " + getStorage() + "Объем памяти: " + getStorage().getStorageSpace() + "\n"
-                        + "Экран: " + getScreen() + "\n"
-                        + "Клавиатура: " + getKeyboard() + "\n"
-                        + "Общий вес компьютера: " + totalWeight + " к/г ";
-
-    }
-}
+public String toString() {
+        return "Имя ПК: " + getName() + "\n"
+        + "Производитель: " + getVendor() + "\n"
+        + "Процессор: " + getProcessor() + "\n"
+        + "Оперативная память: " + getRam() + "\n"
+        + "Накопитель данных: " + getStorage() + "\n"
+        + "Экран: " + getScreen() + "\n"
+        + "Клавиатура: " + getKeyboard() + "\n"
+        + "Общий вес компонентов: " + getTotalWeight() + " к/г";
+        }
+        }
 
 

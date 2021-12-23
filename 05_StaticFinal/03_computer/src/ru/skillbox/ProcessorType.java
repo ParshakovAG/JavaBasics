@@ -1,6 +1,6 @@
 package ru.skillbox;
 
-public enum CpuType {
+public enum ProcessorType {
 
     FREQUENCY,
     CORES,
