@@ -35,7 +35,7 @@ public class Keyboard {
     public String toString() {
         return "Производитель: " + getVendor() + "\n"
                 + "Модель: " + getVendor() + "\n"
-                + "Вес клавиатуры: " + getKeyboardWeight() + " к/г " + "\n"
-                + "Подсветка клавиатуры? " + (isKeyboardLight() ? "Да" : "Нет") + "\n";
+                + "Подсветка клавиатуры? " + (isKeyboardLight() ? "Да" : "Нет") + "\n"
+                + "Вес клавиатуры: " + getKeyboardWeight() + " к/г " + "\n";
     }
 }
