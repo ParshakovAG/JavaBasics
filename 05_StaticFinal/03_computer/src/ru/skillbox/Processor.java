@@ -2,7 +2,8 @@ package ru.skillbox;
 
 public class Processor {
 
-    private ProcessorType type;
+    private final ProcessorType type;
+
     private final double processorFrequency;
     private final double processorCores;
     private final double processorWeight;
@@ -23,7 +24,8 @@ public class Processor {
         return processorWeight;
     }
 
-    public Processor(double processorFrequency, double processorCores, double processorWeight) {
+    public Processor(ProcessorType type, double processorFrequency, double processorCores, double processorWeight) {
+        this.type = type;
         this.processorFrequency = processorFrequency;
         this.processorCores = processorCores;
         this.processorWeight = processorWeight;

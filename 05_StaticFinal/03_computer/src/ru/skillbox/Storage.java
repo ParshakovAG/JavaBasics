@@ -2,13 +2,14 @@ package ru.skillbox;
 
 public class Storage {
 
-    private StorageType type;
+    private final StorageType type;
 
     private final String storageType;
     private final double storageCapacity;
     private final double storageWeight;
 
-    public Storage(String storageType, double storageCapacity, double storageWeight) {
+    public Storage(StorageType type, String storageType, double storageCapacity, double storageWeight) {
+        this.type = type;
         this.storageType = storageType;
         this.storageCapacity = storageCapacity;
         this.storageWeight = storageWeight;

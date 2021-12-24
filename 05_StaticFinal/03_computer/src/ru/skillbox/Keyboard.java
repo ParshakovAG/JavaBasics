@@ -2,7 +2,8 @@ package ru.skillbox;
 
 public class Keyboard {
 
-    private KeyboardType type;
+    private final KeyboardType type;
+
     private final String name;
     private final String vendor;
     public final double keyboardWeight;
@@ -24,7 +25,8 @@ public class Keyboard {
         return vendor;
     }
 
-    public Keyboard(String name, String vendor, double keyboardWeight, boolean keyboardLight) {
+    public Keyboard(KeyboardType type, String name, String vendor, double keyboardWeight, boolean keyboardLight) {
+        this.type = type;
         this.name = name;
         this.vendor = vendor;
         this.keyboardWeight = keyboardWeight;

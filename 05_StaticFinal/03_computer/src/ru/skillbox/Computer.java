@@ -24,6 +24,30 @@ public class Computer {
         this.totalWeight = calculateTotalWeight();
     }
 
+    public void setProcessor(Processor processor) {
+        this.processor = processor;
+    }
+
+    public void setRam(Ram ram) {
+        this.ram = ram;
+    }
+
+    public void setStorage(Storage storage) {
+        this.storage = storage;
+    }
+
+    public void setScreen(Screen screen) {
+        this.screen = screen;
+    }
+
+    public void setKeyboard(Keyboard keyboard) {
+        this.keyboard = keyboard;
+    }
+
+    public void setTotalWeight(double totalWeight) {
+        this.totalWeight = totalWeight;
+    }
+
     public Processor getProcessor() {
         return processor;
     }

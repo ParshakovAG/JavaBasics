@@ -2,7 +2,8 @@ package ru.skillbox;
 
 public class Ram {
 
-    private RamType type;
+    private final RamType type;
+
     private final double ramFrequency;
     private final String ramType;
     private final int ramCapacity;
@@ -24,7 +25,8 @@ public class Ram {
         return ramWeight;
     }
 
-    public Ram(double ramFrequency, String ramType, int ramCapacity, double ramWeight) {
+    public Ram(RamType type, double ramFrequency, String ramType, int ramCapacity, double ramWeight) {
+        this.type = type;
         this.ramFrequency = ramFrequency;
         this.ramType = ramType;
         this.ramCapacity = ramCapacity;

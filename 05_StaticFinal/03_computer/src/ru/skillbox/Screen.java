@@ -2,7 +2,8 @@ package ru.skillbox;
 
 public class Screen {
 
-    private ScreenType type;
+    private final ScreenType type;
+
     private final double size;
     private final double screenWeight;
 
@@ -12,10 +13,6 @@ public class Screen {
 
     public ScreenType getType() {
         return type;
-    }
-
-    public void setType(ScreenType type) {
-        this.type = type;
     }
 
     public double getSize() {
