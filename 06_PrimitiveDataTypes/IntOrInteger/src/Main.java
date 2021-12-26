@@ -17,7 +17,6 @@ public class Main {
             } else if (c >= 'А' && c <= 'я') {
                 System.out.println(i + " - " + c);
             }
-
         }
     }
 }
