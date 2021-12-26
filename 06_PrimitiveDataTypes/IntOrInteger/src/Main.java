@@ -13,8 +13,10 @@ public class Main {
         for (int i = 1025; i < 1106; i++) {
             char c = (char) i;
             if (c == 'Ё' || c == 'ё') {
+
                 System.out.println(i + " - " + c);
             } else if (c >= 'А' && c <= 'я') {
+
                 System.out.println(i + " - " + c);
             }
 
