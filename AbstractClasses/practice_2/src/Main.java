@@ -45,13 +45,13 @@ public class Main {
         for (Employee e : topSalary) {
             System.out.println(e.getMonthSalary());
         }
-        System.out.println("==============================");
+        System.out.println("------------------------------");
 
         System.out.println("     LOWEST SALARY STAFF     ");
         List<Employee> lowSalary = company.getLowestSalaryStaff(5);
         for (Employee e : lowSalary) {
             System.out.println(e.getMonthSalary());
         }
-        System.out.println("==============================");
+        System.out.println("------------------------------");
     }
 }
