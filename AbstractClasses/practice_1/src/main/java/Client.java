@@ -1,16 +1,38 @@
 public abstract class Client {
 
+    private double amount;
+
+    protected Client() {
+    }
+
+    protected Client(double amount) {
+        this.amount = amount;
+    }
+
+    protected void setAmount(double amount) {
+        this.amount = amount;
+    }
     public double getAmount() {
-        //TODO: реализуйте метод и удалите todo
-        return 0;
+
+        return amount;
     }
 
-    public void put(double amount) {
-        //TODO: реализуйте метод и удалите todo
+    public void put(double amountPut) {
+
+        if (amountPut >= 0) {
+            amount += amountPut;
+            System.out.println(getAmount());
+        }
+    }
+    public void take(double amountTake) {
+
+        if (amountTake > getAmount() || amountTake < 0) {
+            System.out.println("Недостаточно средств");
+        } else {
+            amount -= amountTake;
+            System.out.println(getAmount());
+        }
     }
 
-    public void take(double amount) {
-        //TODO: реализуйте метод и удалите todo
-    }
-
+    protected abstract void info();
 }
